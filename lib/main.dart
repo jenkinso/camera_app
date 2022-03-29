@@ -6,12 +6,10 @@ import 'package:image/image.dart' as imageLib;
 import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart';
 import 'package:photofilters/photofilters.dart';
+import 'package:camera/camera.dart';
 
-///TODO: Add the following plugins to your pubspec.yaml file
-///photofilters: ^3.0.1
-//image_picker: ^0.8.4+1
+Future<void> main() async {
 
-void main() {
   runApp(CameraFilterApp());
 }
 
@@ -43,6 +41,8 @@ class _CameraFilterPageState extends State<CameraFilterPage> {
     HefeFilter(),
     MoonFilter(),
   ];
+
+  final ImagePicker _picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
